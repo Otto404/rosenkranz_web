@@ -190,7 +190,7 @@ Im **News-Tab** findest du Neuigkeiten zur App. Ein roter Punkt 🔴 zeigt ungel
 Im **Info-Tab** findest du:
 - App-Version
 - Datenschutzhinweise (keine Tracker, keine Cloud!)
-- Lizenzinformationen (Open Source, MIT)
+- Lizenzinformationen (Alle Rechte vorbehalten)
 - Autor & Mitwirkende
 
 ---
