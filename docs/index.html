@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosenkranz – Betend hören | App für iOS & Android</title>
+    <meta name="description" content="Die Rosenkranz-App begleitet dich beim Gebet – meditativ, ablenkungsfrei, mehrsprachig. Jetzt kostenlos herunterladen.">
+    <meta name="keywords" content="Rosenkranz, Gebet, App, katholisch, Android, iOS, Rosenkranz App, Rosenkranz Gebet, Beten">
+    <meta property="og:title" content="Rosenkranz – Betend hören">
+    <meta property="og:description" content="Die Rosenkranz-App begleitet dich beim Gebet. Kostenlos für iOS & Android.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://otto.github.io/rosenkranz_web/">
+
+    <style>
+        :root {
+            --deep: #0D1B2A;
+            --navy: #1B2D45;
+            --royal: #2C4270;
+            --gold: #D4AF37;
+            --lightGold: #E8D48B;
+            --cream: #F5F0E8;
+            --soft: #E8E0D0;
+            --muted: #8B7530;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--deep);
+            color: var(--cream);
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 { color: var(--gold); font-weight: 300; }
+        h1 { font-size: 2.8em; letter-spacing: 2px; }
+        h2 { font-size: 2em; margin-bottom: 24px; }
+        h3 { font-size: 1.3em; margin-bottom: 8px; }
+        p { opacity: 0.9; margin-bottom: 16px; }
+
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+        /* ─── Navigation ──────────────────────────────────────────── */
+        nav {
+            background: rgba(13, 27, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 100;
+            border-bottom: 1px solid var(--royal);
+            padding: 16px 0;
+        }
+        nav .container {
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        nav .logo { font-size: 1.3em; color: var(--gold); letter-spacing: 1px; }
+        nav a {
+            color: var(--soft); text-decoration: none;
+            margin-left: 24px; font-size: 0.95em; transition: color 0.2s;
+        }
+        nav a:hover { color: var(--gold); }
+
+        /* ─── Hero ────────────────────────────────────────────────── */
+        .hero {
+            text-align: center;
+            padding: 100px 24px 80px;
+            background: linear-gradient(180deg, var(--deep) 0%, var(--navy) 100%);
+        }
+        .hero h1 { margin-bottom: 16px; }
+        .hero .subtitle {
+            font-size: 1.4em; color: var(--soft);
+            font-style: italic; margin-bottom: 40px;
+        }
+        .hero .quote {
+            font-size: 1.1em; color: var(--lightGold);
+            max-width: 600px; margin: 0 auto 48px;
+            opacity: 0.85;
+        }
+        .hero .quote .author { font-size: 0.85em; color: var(--muted); margin-top: 8px; }
+
+        /* ─── Buttons ─────────────────────────────────────────────── */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--deep);
+        }
+        .btn-primary:hover {
+            background: var(--lightGold);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+        .btn-outline {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+        }
+        .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ─── Sections ────────────────────────────────────────────── */
+        section { padding: 80px 0; }
+        section.alt { background: var(--navy); }
+
+        .section-label {
+            text-transform: uppercase; letter-spacing: 3px;
+            font-size: 0.8em; color: var(--muted); margin-bottom: 8px;
+        }
+
+        /* ─── Features Grid ───────────────────────────────────────── */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background: rgba(27, 45, 69, 0.6);
+            border: 1px solid var(--royal);
+            border-radius: 16px;
+            padding: 32px 24px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .feature-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        .feature-card .icon { font-size: 2.2em; margin-bottom: 16px; }
+        .feature-card h3 { margin-bottom: 12px; }
+
+        /* ─── Screenshot Mockup ───────────────────────────────────── */
+        .screenshot-row {
+            display: flex; gap: 24px; justify-content: center;
+            flex-wrap: wrap; margin-top: 40px;
+        }
+        .phone-mock {
+            background: var(--navy);
+            border: 2px solid var(--royal);
+            border-radius: 24px;
+            padding: 16px;
+            width: 200px; height: 360px;
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.85em;
+        }
+        .phone-mock .mock-icon { font-size: 2em; margin-bottom: 12px; }
+        .phone-mock .mock-text { color: var(--gold); font-size: 1em; margin-bottom: 8px; }
+        .phone-mock .mock-word { font-size: 1.1em; opacity: 0.6; }
+
+        /* ─── Video Section ───────────────────────────────────────── */
+        .video-placeholder {
+            background: var(--navy);
+            border: 2px dashed var(--royal);
+            border-radius: 16px;
+            aspect-ratio: 16/9;
+            max-width: 720px;
+            margin: 40px auto 0;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            color: var(--muted);
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+        .video-placeholder:hover { border-color: var(--gold); }
+        .video-placeholder .play-icon {
+            font-size: 4em; margin-bottom: 16px;
+        }
+
+        /* ─── Testimonials ────────────────────────────────────────── */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px; margin-top: 40px;
+        }
+        .testimonial {
+            background: rgba(27, 45, 69, 0.4);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 12px 12px 0;
+            padding: 24px;
+        }
+        .testimonial p { font-style: italic; }
+        .testimonial .name { color: var(--muted); font-size: 0.9em; margin-top: 12px; font-style: normal; }
+
+        /* ─── CTA Banner ──────────────────────────────────────────── */
+        .cta-banner {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--navy) 0%, var(--deep) 100%);
+        }
+        .cta-banner h2 { margin-bottom: 16px; }
+        .cta-banner p { max-width: 500px; margin: 0 auto 32px; }
+
+        /* ─── Footer ──────────────────────────────────────────────── */
+        footer {
+            text-align: center;
+            padding: 48px 24px;
+            border-top: 1px solid var(--royal);
+            color: var(--muted);
+            font-size: 0.85em;
+        }
+        footer a { color: var(--lightGold); text-decoration: none; }
+        footer a:hover { color: var(--gold); }
+        footer .footer-quote {
+            font-style: italic; margin-top: 24px;
+            color: var(--soft); opacity: 0.7;
+        }
+
+        /* ─── Responsive ──────────────────────────────────────────── */
+        @media (max-width: 640px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            .hero { padding: 60px 16px 50px; }
+            .hero .subtitle { font-size: 1.1em; }
+            section { padding: 50px 0; }
+            nav a { margin-left: 12px; font-size: 0.85em; }
+            .btn { padding: 14px 28px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══ Navigation ═══════════════════════════════════════════════════ -->
+<nav>
+    <div class="container">
+        <span class="logo">🕊️ Rosenkranz</span>
+        <div>
+            <a href="#features">Features</a>
+            <a href="#video">Video</a>
+            <a href="#download">Download</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ═══ Hero ═════════════════════════════════════════════════════════ -->
+<header class="hero">
+    <div class="container">
+        <h1>Rosenkranz</h1>
+        <p class="subtitle">Betend hören.</p>
+        <div class="quote">
+            „Der Rosenkranz ist mein Lieblingsgebet. Ein wunderbares Gebet –
+            wunderbar in seiner Einfachheit und Tiefe."
+            <div class="author">– Papst Johannes Paul II.</div>
+        </div>
+        <div class="btn-group">
+            <a href="#download" class="btn btn-primary">📱 Jetzt herunterladen</a>
+            <a href="#features" class="btn btn-outline">Mehr erfahren ↓</a>
+        </div>
+    </div>
+</header>
+
+<!-- ═══ Warum diese App? ════════════════════════════════════════════ -->
+<section id="features">
+    <div class="container">
+        <div class="section-label">Dein Begleiter</div>
+        <h2>Warum eine App zum Beten?</h2>
+        <p>
+            Die App ersetzt nicht dein Gebet – sie unterstützt es. Wie eine Kerze, ein
+            Rosenkranz aus Perlen oder ein stiller Raum. Sie gibt den Text vor, damit
+            dein Herz frei ist für die Begegnung mit Gott.
+        </p>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">📖</div>
+                <h3>Einzeilige Laufschrift</h3>
+                <p>
+                    Lies Wort für Wort in deinem eigenen Tempo. Das aktuelle Wort
+                    erscheint golden und zentriert – die umgebenden Wörter wie ein
+                    leises Echo. Kein Blättern, kein Suchen.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🌍</div>
+                <h3>Drei Sprachen</h3>
+                <p>
+                    Deutsch, Englisch und <strong>Latein</strong> – die Sprache der
+                    Weltkirche. Wechsle jederzeit mit einem Klick. Beten in der
+                    Sprache, die dein Herz berührt.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🔒</div>
+                <h3>100% Privatsphäre</h3>
+                <p>
+                    Keine Tracker. Keine Analyse-Tools. Keine Cloud. Alle Gebete sind
+                    lokal gespeichert. Dein Gebet gehört dir allein.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🎯</div>
+                <h3>Alle 20 Geheimnisse</h3>
+                <p>
+                    Freudenreich, lichtreich, schmerzhaft, glorreich. Mit allen
+                    Einschüben. Die App kennt die richtigen Geheimnisse für jeden
+                    Wochentag.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h3>Dein Tempo</h3>
+                <p>
+                    Von 150 ms (fließend) bis 800 ms (meditativ langsam). Die App
+                    passt sich deinem Rhythmus an – nicht umgekehrt.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🔄</div>
+                <h3>Automatische Updates</h3>
+                <p>
+                    Die App prüft alle 24 Stunden auf neue Versionen. Mit einem Klick
+                    aktualisieren – alle Einstellungen bleiben erhalten.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ Screenshot-Vorschau ═════════════════════════════════════════ -->
+<section class="alt">
+    <div class="container">
+        <div class="section-label">Vorschau</div>
+        <h2>So sieht die App aus</h2>
+        <p>Blau-Gold, warm und ablenkungsfrei – gestaltet für das Gebet.</p>
+
+        <div class="screenshot-row">
+            <div class="phone-mock">
+                <div class="mock-icon">📿</div>
+                <div class="mock-text">Freudenreich ▼</div>
+                <div class="mock-word" style="color:var(--gold);font-size:1.3em;">Gegrüßet</div>
+                <div class="mock-word">seist du,</div>
+                <div class="mock-word">Maria…</div>
+                <div style="margin-top:12px;color:var(--muted);">○○○○●○○○○○</div>
+            </div>
+            <div class="phone-mock">
+                <div class="mock-icon">📰</div>
+                <div class="mock-text">Neuigkeiten</div>
+                <div style="color:var(--gold);margin:8px 0;">● Rosenkranz-App</div>
+                <div class="mock-word">Version 1.0</div>
+                <div class="mock-word">verfügbar…</div>
+            </div>
+            <div class="phone-mock">
+                <div class="mock-icon">ℹ️</div>
+                <div class="mock-text">Info</div>
+                <div class="mock-word">Version 1.0.0</div>
+                <div class="mock-word">Open Source</div>
+                <div style="color:var(--muted);margin-top:8px;">🛡️ Datenschutz</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ Video ════════════════════════════════════════════════════════ -->
+<section id="video">
+    <div class="container" style="text-align:center;">
+        <div class="section-label">Video</div>
+        <h2>Die App in Aktion</h2>
+        <p>In Kürze: Ein Video, das die Bedienung und Atmosphäre der App zeigt.</p>
+
+        <!-- YouTube-Video (Platzhalter – URL ersetzen) -->
+        <div class="video-placeholder" onclick="this.innerHTML='<iframe width=\'100%\' height=\'100%\' src=\'https://www.youtube-nocookie.com/embed/VIDEO_ID\' frameborder=\'0\' allow=\'autoplay; encrypted-media\' allowfullscreen style=\'border-radius:16px;\'></iframe>'">
+            <div class="play-icon">▶️</div>
+            <div>Video demnächst verfügbar</div>
+            <div style="font-size:0.8em;margin-top:8px;">Auf YouTube ansehen</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ Testimonials ═════════════════════════════════════════════════ -->
+<section class="alt">
+    <div class="container">
+        <div class="section-label">Stimmen</div>
+        <h2>Was das Gebet bedeutet</h2>
+
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>
+                    „Das Gebet ist der Schlüssel zum Herzen Gottes. Nicht schöne Worte
+                    zählen, sondern das Vertrauen, mit dem wir uns an ihn wenden."
+                </p>
+                <div class="name">– Hl. Padre Pio</div>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    „Beten heißt nicht: viel reden, sondern viel lieben. Nicht die
+                    Menge der Worte, sondern die Liebe macht das Gebet."
+                </p>
+                <div class="name">– Hl. Theresia von Lisieux</div>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    „Der Rosenkranz ist die Waffe für unsere Zeit. In einer Welt der
+                    Ablenkung führt er uns zurück zum Wesentlichen."
+                </p>
+                <div class="name">– Hl. Pater Pio</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ Download CTA ═════════════════════════════════════════════════ -->
+<section class="cta-banner" id="download">
+    <div class="container">
+        <h2>Bereit für dein Gebet?</h2>
+        <p>
+            Kostenlos. Werbefrei. Tracker-frei.<br>
+            Für iOS und Android.
+        </p>
+        <div class="btn-group">
+            <a href="https://play.google.com/store/apps/details?id=com.rosenkranz.app"
+               class="btn btn-primary" target="_blank" rel="noopener">
+                🤖 Google Play
+            </a>
+            <a href="https://apps.apple.com/app/rosenkranz-app/id000000000"
+               class="btn btn-primary" target="_blank" rel="noopener">
+                🍎 App Store
+            </a>
+        </div>
+        <div class="btn-group" style="margin-top: 16px;">
+            <a href="downloads/windows/Rosenkranz-Windows-x64.zip"
+               class="btn btn-outline">
+                🪟 Windows (ZIP)
+            </a>
+            <a href="downloads/android/Rosenkranz-Android.apk"
+               class="btn btn-outline">
+                📱 Android (APK)
+            </a>
+        </div>
+        <p style="margin-top: 24px; font-size: 0.9em; color: var(--muted);">
+            Direkter Download für Windows und Android.<br>
+            Quellcode auf <a href="https://github.com/Otto/rosenkranz_app"
+            style="color: var(--lightGold);">GitHub</a> (MIT-Lizenz).
+        </p>
+    </div>
+</section>
+
+<!-- ═══ Footer ═══════════════════════════════════════════════════════ -->
+<footer>
+    <div class="container">
+        <p>
+            <a href="handbuch.md">Handbuch</a> ·
+            <a href="https://github.com/Otto/rosenkranz_app">Quellcode (MIT)</a> ·
+            <a href="#">Datenschutz</a>
+        </p>
+        <p style="margin-top: 8px;">© 2026 Rosenkranz-App</p>
+        <p class="footer-quote">
+            „Der Rosenkranz ist die Waffe für unsere Zeit." – Pater Pio
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

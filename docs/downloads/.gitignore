@@ -1,0 +1,5 @@
+# Build-Artefakte (werden per Skript kopiert)
+*.exe
+*.msix
+*.apk
+*.zip

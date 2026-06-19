@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosenkranz-App – Neuigkeiten</title>
+    <style>
+        :root {
+            --blue: #0D1B2A;
+            --navy: #1B2D45;
+            --gold: #D4AF37;
+            --cream: #F5F0E8;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--blue);
+            color: var(--cream);
+            font-family: Georgia, 'Times New Roman', serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 { color: var(--gold); text-align: center; margin-bottom: 32px; font-weight: 300; }
+        .news-item {
+            background: var(--navy);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .news-item h2 {
+            color: var(--gold);
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+        .news-item .date {
+            color: var(--gold);
+            opacity: 0.7;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+        .news-item p { line-height: 1.6; opacity: 0.9; }
+        .footer {
+            text-align: center;
+            margin-top: 48px;
+            opacity: 0.5;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>🕊️ Rosenkranz-App</h1>
+    <p style="text-align:center;margin-bottom:32px;opacity:0.7;">
+        Diese Seite liefert die News für die App.<br>
+        Die App lädt <code>news.json</code> automatisch.
+    </p>
+    <div id="news-container">
+        <p style="text-align:center;opacity:0.5;">News werden geladen…</p>
+    </div>
+    <div class="footer">Rosenkranz-App © 2026</div>
+
+    <script>
+        fetch('news.json')
+            .then(r => r.json())
+            .then(data => {
+                const container = document.getElementById('news-container');
+                container.innerHTML = data.eintraege.map(n => `
+                    <div class="news-item">
+                        <h2>${n.titel}</h2>
+                        <div class="date">${n.datum}</div>
+                        <p>${n.kurztext}</p>
+                    </div>
+                `).join('');
+            })
+            .catch(() => {
+                document.getElementById('news-container').innerHTML =
+                    '<p style="text-align:center;">News konnten nicht geladen werden.</p>';
+            });
+    </script>
+</body>
+</html>
