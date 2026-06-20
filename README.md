@@ -4,6 +4,8 @@ Landing Page und Download-Bereich für die Rosenkranz-App.
 
 🌐 **GitHub Pages:** `https://OTTO.github.io/rosenkranz_web/`
 
+© 2026 – Alle Rechte vorbehalten.
+
 ## Struktur
 
 ```
