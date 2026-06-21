@@ -5,8 +5,8 @@
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $DocsDir = (Resolve-Path "$ScriptDir\..\docs").Path
-$mdPath = "$DocsDir\handbuch.md"
-$htmlPath = "$DocsDir\handbuch.html"
+$mdPath = "$DocsDir\handbuch\handbuch.md"
+$htmlPath = "$DocsDir\handbuch\handbuch.html"
 
 if (-not (Test-Path $mdPath)) {
     Write-Host "❌ $mdPath nicht gefunden" -ForegroundColor Red
