@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "Rosenkranz",
+    "subtitle": "Betend hören"
+  },
+  "tabs": {
+    "rosary": "Rosenkranz",
+    "news": "Neuigkeiten",
+    "info": "Info",
+    "settings": "Einstellungen"
+  },
+  "controls": {
+    "play": "Abspielen",
+    "pause": "Pause",
+    "stop": "Stop",
+    "back": "Zurück",
+    "forward": "Weiter",
+    "speed": "Geschwindigkeit",
+    "speedUnit": "ms/Wort"
+  },
+  "tooltips": {
+    "speed": "Geschwindigkeit: {speed} ms pro Wort",
+    "speedSlider": "Geschwindigkeit regeln ({speed} ms/Wort)",
+    "gesatzGroup": "Gesätz-Gruppe wählen",
+    "mystery": "Geheimnis {n}",
+    "beadProgress": "Perlen-Fortschritt: {current} / {total}",
+    "language": "Sprache wählen",
+    "tabRosary": "Rosenkranz – Gebet starten",
+    "tabNews": "Neuigkeiten",
+    "tabInfo": "Info",
+    "tabSettings": "Einstellungen"
+  },
+  "gesaetze": {
+    "freudenreich": "Freudenreich",
+    "lichtreich": "Lichtreich",
+    "schmerzhaft": "Schmerzhaft",
+    "glorreich": "Glorreich"
+  },
+  "errors": {
+    "loadFailed": "Fehler beim Laden",
+    "noWords": "Keine Wörter geladen.",
+    "noConnection": "Keine Verbindung",
+    "newsFailed": "News konnten nicht geladen werden.",
+    "noNews": "Keine Neuigkeiten."
+  },
+  "settings": {
+    "visibleLines": "Sichtbare Zeilen bei Start",
+    "visibleLinesHint": "Wie viele Textzeilen beim Start sichtbar sind.",
+    "defaultSpeed": "Standard-Geschwindigkeit",
+    "defaultSpeedHint": "Geschwindigkeit in Millisekunden pro Wort.",
+    "reset": "Auf Standard zurücksetzen",
+    "resetTitle": "Zurücksetzen?",
+    "resetConfirm": "Alle Einstellungen auf die Standardwerte zurücksetzen?",
+    "autoSave": "Alle Änderungen werden automatisch gespeichert."
+  },
+  "cancel": "Abbrechen",
+  "splash": {
+    "loading": "Lädt…"
+  },
+  "info": {
+    "title": "Rosenkranz",
+    "subtitle": "„Betend hören\"",
+    "aboutTitle": "Über die App",
+    "aboutText": "Die Rosenkranz-App begleitet dich beim Gebet – meditativ, ablenkungsfrei und in deinem eigenen Tempo. Mit einzeiliger Laufschrift, Mehrsprachigkeit (Deutsch, Englisch, Latein) und aktuellen Neuigkeiten.",
+    "privacyTitle": "Datenschutz",
+    "privacyText": "Diese App sammelt keine personenbezogenen Daten. Keine Tracker, keine Analyse-Tools, keine Cloud-Anbindung. Alle Gebetsdaten sind lokal gespeichert. Die News werden von einer konfigurierbaren URL geladen – standardmäßig GitHub Pages.",
+    "privacyLink": "Datenschutzerklärung",
+    "licenseTitle": "Lizenz",
+    "licenseText": "Diese App ist urheberrechtlich geschützt. Alle Rechte vorbehalten.\n\nGebetstexte sind gemeinfrei (Public Domain).",
+    "authorTitle": "Autor & Mitwirkende",
+    "authorText": "Entwickelt mit Liebe zum Gebet.\n\n© 2026 – Alle Rechte vorbehalten.\nMitwirkende sind willkommen!",
+    "version": "Version"
+  }
+}

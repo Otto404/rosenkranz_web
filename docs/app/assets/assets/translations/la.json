@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "Rosarium",
+    "subtitle": "Orans audire"
+  },
+  "tabs": {
+    "rosary": "Rosarium",
+    "news": "Nuntii",
+    "info": "Info",
+    "settings": "Modi"
+  },
+  "controls": {
+    "play": "Incipere",
+    "pause": "Pausa",
+    "stop": "Finis",
+    "back": "Retro",
+    "forward": "Progredere",
+    "speed": "Velocitas",
+    "speedUnit": "ms/Verbum"
+  },
+  "tooltips": {
+    "speed": "Velocitas: {speed} ms per verbum",
+    "speedSlider": "Velocitatem accommodare ({speed} ms/Verbum)",
+    "gesatzGroup": "Mysteria eligere",
+    "mystery": "Mysterium {n}",
+    "beadProgress": "Progressio: {current} / {total}",
+    "language": "Linguam eligere",
+    "tabRosary": "Rosarium – Orare incipere",
+    "tabNews": "Nuntii",
+    "tabInfo": "Info",
+    "tabSettings": "Modi"
+  },
+  "gesaetze": {
+    "freudenreich": "Gaudiosa",
+    "lichtreich": "Luminosa",
+    "schmerzhaft": "Dolorosa",
+    "glorreich": "Gloriosa"
+  },
+  "errors": {
+    "loadFailed": "Lapsus onerandi",
+    "noWords": "Nulla verba onerata.",
+    "noConnection": "Nulla conexio",
+    "newsFailed": "Nuntii onerari non potuerunt.",
+    "noNews": "Nulli nuntii."
+  },
+  "settings": {
+    "visibleLines": "Lineae visibiles in initio",
+    "visibleLinesHint": "Quot lineae textus in initio visibiles sint.",
+    "defaultSpeed": "Velocitas initialis",
+    "defaultSpeedHint": "Velocitas in millisecundis per verbum.",
+    "reset": "Ad valores initiales restituere",
+    "resetTitle": "Restituere?",
+    "resetConfirm": "Omnes modos ad valores initiales restituere?",
+    "autoSave": "Omnes mutationes automatice servantur."
+  },
+  "cancel": "Abrogare",
+  "splash": {
+    "loading": "Oneratur…"
+  },
+  "info": {
+    "title": "Rosarium",
+    "subtitle": "\"Orans audire\"",
+    "aboutTitle": "De App",
+    "aboutText": "App Rosarii te in oratione comitatur – meditative, sine distractione, tuo proprio gradu. Cum textu unilineari currente, multilinguismo (Theodisce, Anglice, Latine) et nuntiis recentibus.",
+    "privacyTitle": "Secretum",
+    "privacyText": "Haec app nulla data personalia colligit. Nullae machinae vestigatoriae, nulla instrumenta analytica, nulla conexio nubis. Omnia orationis data localiter servantur. Nuntii ex URL configuribili onerantur – per defaltam GitHub Pages.",
+    "privacyLink": "Consilium Secreti",
+    "licenseTitle": "Licentia",
+    "licenseText": "Haec app iure auctoris protecta est. Omnia iura reservata.\n\nTextus orationum in dominio publico sunt.",
+    "authorTitle": "Auctor & Collaboratores",
+    "authorText": "Cum amore orationis excultum.\n\n© 2026 – Omnia iura reservata.\nCollaboratores grati sunt!",
+    "version": "Versio"
+  }
+}

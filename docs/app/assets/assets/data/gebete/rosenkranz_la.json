@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "version": "1.0",
+    "sprache": "la",
+    "beschreibung": "Rosarium integrum catholicum cum omnibus quattuor mysteriorum seriebus."
+  },
+
+  "grundgebete": {
+    "kreuzzeichen": "In nomine Patris, et Filii, et Spiritus Sancti. Amen.",
+    "glaubensbekenntnis": "Credo in Deum, Patrem omnipotentem, Creatorem caeli et terrae, et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus; descendit ad inferos; tertia die resurrexit a mortuis; ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis; inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen.",
+    "ehreSeiDemVater": "Gloria Patri, et Filio, et Spiritui Sancto, sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen.",
+    "vaterunser": "Pater noster, qui es in caelis, sanctificetur nomen tuum; adveniat regnum tuum; fiat voluntas tua, sicut in caelo et in terra. Panem nostrum quotidianum da nobis hodie, et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris; et ne nos inducas in tentationem, sed libera nos a malo. Amen.",
+    "aveMaria": {
+      "text": "Ave Maria, gratia plena, Dominus tecum; benedicta tu in mulieribus, et benedictus fructus ventris tui, Iesus. Sancta Maria, Mater Dei, ora pro nobis peccatoribus, nunc et in hora mortis nostrae. Amen.",
+      "einfuegungNach": "Iesus"
+    },
+    "fatimaGebet": {
+      "text": "O mi Iesu, dimitte nobis debita nostra, libera nos ab igne inferni, conduc in caelum omnes animas, praesertim eas quae misericordiae tuae maxime indigent. Amen.",
+      "optional": true
+    }
+  },
+
+  "einfuehrungsPerlen": [
+    { "typ": "kreuzzeichen" },
+    { "typ": "glaubensbekenntnis" },
+    { "typ": "ehreSeiDemVater" },
+    { "typ": "vaterunser" },
+    { "typ": "aveMaria", "einfuegung": "qui augeat in nobis fidem" },
+    { "typ": "aveMaria", "einfuegung": "qui confirmet in nobis spem" },
+    { "typ": "aveMaria", "einfuegung": "qui accendat in nobis caritatem" },
+    { "typ": "ehreSeiDemVater" }
+  ],
+
+  "gesaetzStruktur": [
+    { "typ": "vaterunser" },
+    { "typ": "aveMaria", "wiederholungen": 10 },
+    { "typ": "ehreSeiDemVater" },
+    { "typ": "fatimaGebet", "optional": true, "optionalId": "gesaetz.fatimaGebet" }
+  ],
+
+  "rosenkranzGesetze": {
+    "freudenreich": {
+      "name": "Mysteria Gaudiosa",
+      "tage": ["feria secunda", "sabbato"],
+      "beschreibung": "de nativitate et infantia Iesu",
+      "geheimnisse": [
+        { "nummer": 1, "titel": "Iesus, quem tu, Virgo, de Spiritu Sancto concepisti", "kurzTitel": "Annuntiatio", "einfuegung": "quem tu, Virgo, de Spiritu Sancto concepisti" },
+        { "nummer": 2, "titel": "Iesus, quem tu, Virgo, ad Elisabeth portasti", "kurzTitel": "Visitatio", "einfuegung": "quem tu, Virgo, ad Elisabeth portasti" },
+        { "nummer": 3, "titel": "Iesus, quem tu, Virgo, in Bethlehem peperisti", "kurzTitel": "Nativitas", "einfuegung": "quem tu, Virgo, in Bethlehem peperisti" },
+        { "nummer": 4, "titel": "Iesus, quem tu, Virgo, in Templo obtulisti", "kurzTitel": "Praesentatio", "einfuegung": "quem tu, Virgo, in Templo obtulisti" },
+        { "nummer": 5, "titel": "Iesus, quem tu, Virgo, in Templo invenisti", "kurzTitel": "Inventio in Templo", "einfuegung": "quem tu, Virgo, in Templo invenisti" }
+      ]
+    },
+    "lichtreich": {
+      "name": "Mysteria Luminosa",
+      "tage": ["feria quinta"],
+      "beschreibung": "de ministerio publico Iesu",
+      "geheimnisse": [
+        { "nummer": 1, "titel": "Iesus, qui a Ioanne baptizatus est", "kurzTitel": "Baptisma in Iordane", "einfuegung": "qui a Ioanne baptizatus est" },
+        { "nummer": 2, "titel": "Iesus, qui se ipsum in Cana manifestavit", "kurzTitel": "Nuptiae in Cana", "einfuegung": "qui se ipsum in Cana manifestavit" },
+        { "nummer": 3, "titel": "Iesus, qui Regnum Dei annuntiavit", "kurzTitel": "Annuntiatio Regni Dei", "einfuegung": "qui Regnum Dei annuntiavit" },
+        { "nummer": 4, "titel": "Iesus, qui in monte transfiguratus est", "kurzTitel": "Transfiguratio", "einfuegung": "qui in monte transfiguratus est" },
+        { "nummer": 5, "titel": "Iesus, qui Eucharistiam nobis donavit", "kurzTitel": "Institutio Eucharistiae", "einfuegung": "qui Eucharistiam nobis donavit" }
+      ]
+    },
+    "schmerzhaft": {
+      "name": "Mysteria Dolorosa",
+      "tage": ["feria tertia", "feria sexta"],
+      "beschreibung": "de passione et morte Iesu",
+      "geheimnisse": [
+        { "nummer": 1, "titel": "Iesus, qui pro nobis sanguinem sudavit", "kurzTitel": "Agonia in Horto", "einfuegung": "qui pro nobis sanguinem sudavit" },
+        { "nummer": 2, "titel": "Iesus, qui pro nobis flagellatus est", "kurzTitel": "Flagellatio", "einfuegung": "qui pro nobis flagellatus est" },
+        { "nummer": 3, "titel": "Iesus, qui pro nobis spinis coronatus est", "kurzTitel": "Coronatio Spinis", "einfuegung": "qui pro nobis spinis coronatus est" },
+        { "nummer": 4, "titel": "Iesus, qui pro nobis crucem gravem portavit", "kurzTitel": "Baiulatio Crucis", "einfuegung": "qui pro nobis crucem gravem portavit" },
+        { "nummer": 5, "titel": "Iesus, qui pro nobis crucifixus est", "kurzTitel": "Crucifixio", "einfuegung": "qui pro nobis crucifixus est" }
+      ]
+    },
+    "glorreich": {
+      "name": "Mysteria Gloriosa",
+      "tage": ["feria quarta", "dominica"],
+      "beschreibung": "de resurrectione Iesu",
+      "geheimnisse": [
+        { "nummer": 1, "titel": "Iesus, qui a mortuis resurrexit", "kurzTitel": "Resurrectio", "einfuegung": "qui a mortuis resurrexit" },
+        { "nummer": 2, "titel": "Iesus, qui in caelum ascendit", "kurzTitel": "Ascensio", "einfuegung": "qui in caelum ascendit" },
+        { "nummer": 3, "titel": "Iesus, qui Spiritum Sanctum nobis misit", "kurzTitel": "Missio Spiritus Sancti", "einfuegung": "qui Spiritum Sanctum nobis misit" },
+        { "nummer": 4, "titel": "Iesus, qui te, Virgo, in caelum assumpsit", "kurzTitel": "Assumptio", "einfuegung": "qui te, Virgo, in caelum assumpsit" },
+        { "nummer": 5, "titel": "Iesus, qui te, Virgo, in caelo coronavit", "kurzTitel": "Coronatio", "einfuegung": "qui te, Virgo, in caelo coronavit" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "Rosary",
+    "subtitle": "Prayerful listening"
+  },
+  "tabs": {
+    "rosary": "Rosary",
+    "news": "News",
+    "info": "Info",
+    "settings": "Settings"
+  },
+  "controls": {
+    "play": "Play",
+    "pause": "Pause",
+    "stop": "Stop",
+    "back": "Back",
+    "forward": "Forward",
+    "speed": "Speed",
+    "speedUnit": "ms/Word"
+  },
+  "tooltips": {
+    "speed": "Speed: {speed} ms per word",
+    "speedSlider": "Adjust speed ({speed} ms/Word)",
+    "gesatzGroup": "Select mystery group",
+    "mystery": "Mystery {n}",
+    "beadProgress": "Bead progress: {current} / {total}",
+    "language": "Select language",
+    "tabRosary": "Rosary – Start prayer",
+    "tabNews": "News",
+    "tabInfo": "Info",
+    "tabSettings": "Settings"
+  },
+  "gesaetze": {
+    "freudenreich": "Joyful",
+    "lichtreich": "Luminous",
+    "schmerzhaft": "Sorrowful",
+    "glorreich": "Glorious"
+  },
+  "errors": {
+    "loadFailed": "Loading failed",
+    "noWords": "No words loaded.",
+    "noConnection": "No connection",
+    "newsFailed": "News could not be loaded.",
+    "noNews": "No news."
+  },
+  "settings": {
+    "visibleLines": "Visible lines at start",
+    "visibleLinesHint": "How many text lines are visible when starting.",
+    "defaultSpeed": "Default speed",
+    "defaultSpeedHint": "Speed in milliseconds per word.",
+    "reset": "Reset to defaults",
+    "resetTitle": "Reset?",
+    "resetConfirm": "Reset all settings to default values?",
+    "autoSave": "All changes are saved automatically."
+  },
+  "cancel": "Cancel",
+  "splash": {
+    "loading": "Loading…"
+  },
+  "info": {
+    "title": "Rosary",
+    "subtitle": "\"Prayerful listening\"",
+    "aboutTitle": "About the App",
+    "aboutText": "The Rosary App accompanies you in prayer – meditative, distraction-free, and at your own pace. With single-line scrolling text, multilingual support (German, English, Latin), and current news.",
+    "privacyTitle": "Privacy",
+    "privacyText": "This app does not collect any personal data. No trackers, no analytics tools, no cloud connection. All prayer data is stored locally. News is loaded from a configurable URL – defaulting to GitHub Pages.",
+    "privacyLink": "Privacy Policy",
+    "licenseTitle": "License",
+    "licenseText": "This app is protected by copyright. All rights reserved.\n\nPrayer texts are in the public domain.",
+    "authorTitle": "Author & Contributors",
+    "authorText": "Developed with love for prayer.\n\n© 2026 – All rights reserved.\nContributors welcome!",
+    "version": "Version"
+  }
+}

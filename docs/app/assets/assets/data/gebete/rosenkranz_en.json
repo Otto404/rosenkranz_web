@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "version": "1.0",
+    "sprache": "en",
+    "beschreibung": "Complete Catholic Rosary with all four sets of mysteries. Structure: Sign of the Cross → Apostles' Creed → Glory Be → Our Father → 3× Hail Mary (Faith/Hope/Love) → Glory Be → 5 Decades (each: Our Father → 10× Hail Mary → Glory Be → Fatima Prayer)."
+  },
+
+  "grundgebete": {
+    "kreuzzeichen": "In the name of the Father, and of the Son, and of the Holy Spirit. Amen.",
+    "glaubensbekenntnis": "I believe in God, the Father almighty, Creator of heaven and earth, and in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended into hell; on the third day he rose again from the dead; he ascended into heaven, and is seated at the right hand of God the Father almighty; from there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.",
+    "ehreSeiDemVater": "Glory be to the Father, and to the Son, and to the Holy Spirit, as it was in the beginning, is now, and ever shall be, world without end. Amen.",
+    "vaterunser": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.",
+    "aveMaria": {
+      "text": "Hail Mary, full of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
+      "einfuegungNach": "Jesus"
+    },
+    "fatimaGebet": {
+      "text": "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to heaven, especially those most in need of thy mercy. Amen.",
+      "optional": true
+    }
+  },
+
+  "einfuehrungsPerlen": [
+    { "typ": "kreuzzeichen" },
+    { "typ": "glaubensbekenntnis" },
+    { "typ": "ehreSeiDemVater" },
+    { "typ": "vaterunser" },
+    { "typ": "aveMaria", "einfuegung": "who increases our faith" },
+    { "typ": "aveMaria", "einfuegung": "who strengthens our hope" },
+    { "typ": "aveMaria", "einfuegung": "who enkindles our love" },
+    { "typ": "ehreSeiDemVater" }
+  ],
+
+  "gesaetzStruktur": [
+    { "typ": "vaterunser" },
+    { "typ": "aveMaria", "wiederholungen": 10 },
+    { "typ": "ehreSeiDemVater" },
+    { "typ": "fatimaGebet", "optional": true, "optionalId": "gesaetz.fatimaGebet" }
+  ],
+
+  "rosenkranzGesetze": {
+    "freudenreich": {
+      "name": "Joyful Mysteries",
+      "tage": ["monday", "saturday"],
+      "beschreibung": "on the birth and childhood of Jesus",
+      "geheimnisse": [
+        { "nummer": 1, "titel": "Jesus, whom you, O Virgin, conceived by the Holy Spirit", "kurzTitel": "The Annunciation", "einfuegung": "whom you, O Virgin, conceived by the Holy Spirit" },
+        { "nummer": 2, "titel": "Jesus, whom you, O Virgin, carried to Elizabeth", "kurzTitel": "The Visitation", "einfuegung": "whom you, O Virgin, carried to Elizabeth" },
+        { "nummer": 3, "titel": "Jesus, whom you, O Virgin, gave birth to in Bethlehem", "kurzTitel": "The Nativity", "einfuegung": "whom you, O Virgin, gave birth to in Bethlehem" },
+        { "nummer": 4, "titel": "Jesus, whom you, O Virgin, presented in the Temple", "kurzTitel": "The Presentation", "einfuegung": "whom you, O Virgin, presented in the Temple" },
+        { "nummer": 5, "titel": "Jesus, whom you, O Virgin, found again in the Temple", "kurzTitel": "The Finding in the Temple", "einfuegung": "whom you, O Virgin, found again in the Temple" }
+      ]
+    },
+    "lichtreich": {
+      "name": "Luminous Mysteries",
+      "tage": ["thursday"],
+      "beschreibung": "on the public ministry of Jesus",
+      "geheimnisse": [
+        { "nummer": 1, "titel": "Jesus, who was baptized by John", "kurzTitel": "The Baptism in the Jordan", "einfuegung": "who was baptized by John" },
+        { "nummer": 2, "titel": "Jesus, who revealed himself at the wedding in Cana", "kurzTitel": "The Wedding at Cana", "einfuegung": "who revealed himself at the wedding in Cana" },
+        { "nummer": 3, "titel": "Jesus, who proclaimed the Kingdom of God", "kurzTitel": "The Proclamation of the Kingdom", "einfuegung": "who proclaimed the Kingdom of God" },
+        { "nummer": 4, "titel": "Jesus, who was transfigured on the mountain", "kurzTitel": "The Transfiguration", "einfuegung": "who was transfigured on the mountain" },
+        { "nummer": 5, "titel": "Jesus, who gave us the Eucharist", "kurzTitel": "The Institution of the Eucharist", "einfuegung": "who gave us the Eucharist" }
+      ]
+    },
+    "schmerzhaft": {
+      "name": "Sorrowful Mysteries",
+      "tage": ["tuesday", "friday"],
+      "beschreibung": "on the suffering and death of Jesus",
+      "geheimnisse": [
+        { "nummer": 1, "titel": "Jesus, who sweated blood for us", "kurzTitel": "The Agony in the Garden", "einfuegung": "who sweated blood for us" },
+        { "nummer": 2, "titel": "Jesus, who was scourged for us", "kurzTitel": "The Scourging at the Pillar", "einfuegung": "who was scourged for us" },
+        { "nummer": 3, "titel": "Jesus, who was crowned with thorns for us", "kurzTitel": "The Crowning with Thorns", "einfuegung": "who was crowned with thorns for us" },
+        { "nummer": 4, "titel": "Jesus, who carried the heavy cross for us", "kurzTitel": "The Carrying of the Cross", "einfuegung": "who carried the heavy cross for us" },
+        { "nummer": 5, "titel": "Jesus, who was crucified for us", "kurzTitel": "The Crucifixion", "einfuegung": "who was crucified for us" }
+      ]
+    },
+    "glorreich": {
+      "name": "Glorious Mysteries",
+      "tage": ["wednesday", "sunday"],
+      "beschreibung": "on the resurrection of Jesus",
+      "geheimnisse": [
+        { "nummer": 1, "titel": "Jesus, who rose from the dead", "kurzTitel": "The Resurrection", "einfuegung": "who rose from the dead" },
+        { "nummer": 2, "titel": "Jesus, who ascended into heaven", "kurzTitel": "The Ascension", "einfuegung": "who ascended into heaven" },
+        { "nummer": 3, "titel": "Jesus, who sent us the Holy Spirit", "kurzTitel": "The Descent of the Holy Spirit", "einfuegung": "who sent us the Holy Spirit" },
+        { "nummer": 4, "titel": "Jesus, who took you, O Virgin, up into heaven", "kurzTitel": "The Assumption", "einfuegung": "who took you, O Virgin, up into heaven" },
+        { "nummer": 5, "titel": "Jesus, who crowned you, O Virgin, in heaven", "kurzTitel": "The Coronation", "einfuegung": "who crowned you, O Virgin, in heaven" }
+      ]
+    }
+  }
+}
