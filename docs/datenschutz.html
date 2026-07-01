@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz – Rosenkranz-App</title>
+    <meta name="description" content="Datenschutzerklärung der Rosenkranz-App – Informationen zur Verarbeitung personenbezogener Daten.">
+    <style>
+        :root {
+            --deep: #0D1B2A; --navy: #1B2D45; --royal: #2C4270;
+            --gold: #D4AF37; --lightGold: #E8D48B; --cream: #F5F0E8;
+            --soft: #E8E0D0; --muted: #8B7530;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: var(--deep); color: var(--cream);
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.8; max-width: 720px; margin: 0 auto; padding: 40px 24px;
+        }
+        h1, h2, h3 { color: var(--gold); font-weight: 300; }
+        h1 { font-size: 2.2em; margin: 32px 0 8px; letter-spacing: 2px; }
+        h2 { font-size: 1.5em; margin: 28px 0 12px; border-bottom: 1px solid var(--royal); padding-bottom: 8px; }
+        h3 { font-size: 1.2em; margin: 20px 0 8px; }
+        p { margin-bottom: 14px; opacity: 0.92; }
+        a { color: var(--lightGold); text-decoration: none; }
+        a:hover { color: var(--gold); }
+        strong { color: var(--gold); font-weight: 600; }
+        hr { border: none; border-top: 1px solid var(--royal); margin: 24px 0; }
+        ul { margin: 12px 0 12px 24px; }
+        ul li { margin-bottom: 6px; opacity: 0.92; }
+
+        nav { margin-bottom: 32px; }
+        nav a { margin-right: 16px; font-size: 0.95em; }
+        .back-link { display: inline-block; margin-bottom: 24px; color: var(--muted); }
+        .back-link:hover { color: var(--gold); }
+
+        address { font-style: normal; margin: 16px 0; padding: 16px; background: rgba(27,45,69,0.4); border-radius: 8px; border-left: 3px solid var(--gold); }
+        address p { margin-bottom: 4px; }
+
+        .highlight-box {
+            margin: 16px 0; padding: 16px 20px;
+            background: rgba(27,45,69,0.4); border-radius: 8px;
+            border-left: 3px solid var(--gold);
+        }
+
+        footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--royal); text-align: center; color: var(--muted); font-size: 0.85em; }
+        footer a { color: var(--lightGold); }
+
+        @media (max-width:640px) { body { padding: 20px 16px; } h1 { font-size: 1.8em; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    </nav>
+
+    <h1>Datenschutzerklärung</h1>
+    <p style="color: var(--muted); font-size: 0.9em;">Stand: Juli 2026</p>
+
+    <hr>
+
+    <div class="highlight-box">
+        <strong>🔒 Kurz & knapp:</strong> Die Rosenkranz-App erhebt <strong>keine</strong> personenbezogenen Daten.
+        Es gibt keine Tracker, keine Analyse-Tools, keine Werbung und keine Cloud-Synchronisation.
+        Alle Gebetsdaten und Einstellungen verbleiben ausschließlich auf deinem Gerät.
+    </div>
+
+    <h2>1. Verantwortlicher</h2>
+    <address>
+        <p><strong>Otto Fischer</strong></p>
+        <p>George-Marshall Str. 13 B</p>
+        <p>65197 Wiesbaden</p>
+        <p>Deutschland</p>
+        <p>E-Mail: <a href="mailto:otto404@users.noreply.github.com">otto404@users.noreply.github.com</a></p>
+    </address>
+
+    <h2>2. Datenerfassung in der App</h2>
+    <p>
+        Die Rosenkranz-App ist eine reine Offline-App. Es werden <strong>keine personenbezogenen Daten</strong>
+        erhoben, verarbeitet oder genutzt. Insbesondere:
+    </p>
+    <ul>
+        <li>Keine Analyse-Tools (Google Analytics, Firebase oder ähnliche)</li>
+        <li>Keine Tracker oder Cookies</li>
+        <li>Keine Werbung (keine Ad-Netzwerke eingebunden)</li>
+        <li>Keine Cloud-Synchronisation (alle Daten bleiben lokal)</li>
+        <li>Keine Registrierung oder Nutzerkonten erforderlich</li>
+        <li>Keine Weitergabe von Daten an Dritte</li>
+    </ul>
+
+    <h2>3. Lokale Speicherung</h2>
+    <p>
+        Die App speichert folgende Informationen ausschließlich <strong>lokal</strong> auf deinem Gerät:
+    </p>
+    <ul>
+        <li><strong>Einstellungen:</strong> Sprachauswahl, Anzeigegeschwindigkeit und aktiver Rosenkranz-Tag</li>
+        <li><strong>News-Gelesen-Status:</strong> Welche Neuigkeiten du bereits gesehen hast</li>
+    </ul>
+    <p>
+        Diese Daten werden über die <code>SharedPreferences</code> (Android/iOS) bzw. <code>localStorage</code>
+        (Web) gespeichert. Sie können jederzeit über die App-Einstellungen oder durch Löschen der
+        App-Daten entfernt werden.
+    </p>
+
+    <h2>4. App-Updates</h2>
+    <p>
+        Die App prüft in regelmäßigen Abständen (alle 24 Stunden) auf dem
+        <a href="https://github.com/otto404/rosenkranz_web" target="_blank" rel="noopener">GitHub-Server</a>,
+        ob eine neue Version verfügbar ist. Dabei wird eine einfache HTTP-Anfrage an den Server
+        gestellt. Hierbei werden keine personenbezogenen Daten übermittelt. Der Server empfängt
+        lediglich die IP-Adresse, was bei jeder Internetverbindung technisch bedingt ist.
+    </p>
+
+    <h2>5. Website (Webseite & Handbuch)</h2>
+    <p>
+        Diese Website wird statisch auf <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+        gehostet. GitHub kann als Hosting-Anbieter technische Zugriffsdaten (insbesondere die IP-Adresse)
+        erfassen. Für die Datenverarbeitung durch GitHub gelten die
+        <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">Datenschutzbestimmungen von GitHub</a>.
+    </p>
+    <p>
+        Es werden auf dieser Website keine Cookies gesetzt, keine Tracking-Skripte eingebunden und
+        keine Analysedienste (wie Google Analytics) verwendet.
+    </p>
+
+    <h2>6. Verlinkungen zu Diensten Dritter</h2>
+    <p>
+        Die Website enthält Links zu externen Diensten (Google Play Store, Apple App Store).
+        Wenn du diesen Links folgst, werden die jeweiligen Betreiber deine IP-Adresse und
+        ggf. weitere technische Daten empfangen. Für die Datenverarbeitung durch diese Dienste
+        gelten die jeweiligen Datenschutzbestimmungen der Anbieter.
+    </p>
+
+    <h2>7. Deine Rechte</h2>
+    <p>Dir stehen folgende Rechte nach der DSGVO zu:</p>
+    <ul>
+        <li><strong>Auskunft (Art. 15 DSGVO):</strong> Recht auf Auskunft über gespeicherte Daten</li>
+        <li><strong>Berichtigung (Art. 16 DSGVO):</strong> Recht auf Berichtigung unrichtiger Daten</li>
+        <li><strong>Löschung (Art. 17 DSGVO):</strong> Recht auf Löschung gespeicherter Daten</li>
+        <li><strong>Einschränkung (Art. 18 DSGVO):</strong> Recht auf Einschränkung der Verarbeitung</li>
+        <li><strong>Widerspruch (Art. 21 DSGVO):</strong> Recht auf Widerspruch gegen die Verarbeitung</li>
+        <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Recht auf Herausgabe der Daten</li>
+        <li><strong>Beschwerde (Art. 77 DSGVO):</strong> Recht auf Beschwerde bei einer Aufsichtsbehörde</li>
+    </ul>
+    <p>
+        Da wir keine personenbezogenen Daten speichern, sind die meisten dieser Rechte im
+        Regelfall bereits gegenstandslos. Bei Fragen kannst du uns jederzeit kontaktieren.
+    </p>
+
+    <h2>8. Änderungen dieser Datenschutzerklärung</h2>
+    <p>
+        Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an
+        geänderte rechtliche oder technische Rahmenbedingungen anzupassen. Die jeweils aktuelle
+        Fassung ist auf dieser Seite abrufbar.
+    </p>
+
+    <hr>
+
+    <footer>
+        <p>
+            <a href="index.html">Startseite</a> ·
+            <a href="handbuch/handbuch.html">Handbuch</a> ·
+            <a href="impressum.html">Impressum</a>
+        </p>
+        <p>© 2026 Rosenkranz-App</p>
+    </footer>
+
+</body>
+</html>
